@@ -1,0 +1,295 @@
+/*image de même taille que ecran*/
+body { 
+background: url('../fond.jpg') fixed no-repeat left ;
+	background-color: white;
+	margin:0;
+    padding:0;
+	background-size: cover; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover; 
+	-o-background-size: cover; 
+}
+/*Sophie Cavadini*/
+#entete h1 {
+	clear: both; /*Permet le retour à la ligne après le float du "menu_hor li" !!!*/
+	font-family: Impact, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 32px;
+	font-weight: lighter;
+	color: #000000;
+	text-decoration: none;
+	position: absolute; /*peut se superposer*/
+	top:40px; left:180px; 
+	/*z-index:1; au dessus */
+}
+/*Décors et costumes de scène*/
+#entete h2 {
+	font-size: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: lighter;
+	color: #424748;
+	font-weight: bold;
+	text-decoration: none;
+	position: absolute; /*peut se superposer*/
+	top:90px; left:180px; 
+	/*z-index:2; en dessous */ 
+}
+/*SCENOGRAPHIES, DECORS, ....*/
+#entete h3 {
+	font-size: 20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: lighter;
+	font-weight: bold;
+	color: #424748;
+	text-decoration: none;
+	position: absolute; /*peut se superposer*/
+	top:150px; left:1000px; 
+}
+
+	/*MENU EN BLOC*/
+
+/*On supprime les puces, on précise une largeur et on centre la liste par rapport à la page*/
+#menu_bloc ul
+{
+	list-style: none;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	position: relative; /*peut se superposer*/
+	top:250px;
+}
+/*On fixe les dimensions des éléments de la liste*/
+#menu_bloc li
+{
+	width: 180px;
+	height: 200px;
+/* Mise en forme du texte*/
+	text-align: center; 
+	font-weight: bold;
+/* Modification de l'affichage pour que les éléments soient sur la même ligne */
+	display: inline-block;
+/* Petite bordure et définition des marges */
+	border: 1px solid #000;
+	margin: 10px;
+	padding: 0px;
+/* Coins arrondis */
+	border-radius: 10px;
+/* On centre l'arrière-plan */
+	background-position: center;
+/* On modifie la position pour pouvoir ensuite placer comme on le souhaite la description des liens */
+	position: relative;
+/* On n'affiche pas ce qui dépasse de nos éléments */
+	overflow: hidden;	
+}
+#menu_bloc li a
+{
+/* Pour fixer les dimensions d'un lien, il est nécessaire de l'afficher en tant qu'élément de type block */
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+#menu_bloc li span
+{
+	display: block;
+	height: 40px;
+	width: 100%;
+	color: #fff;
+	margin: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: lighter;     
+/* La taille des lignes égale à la hauteur de l'élément. Pour centrer verticalement le texte */
+	line-height: 50px;
+/* Arrière-plan semi-transparent */
+	background-color: rgba(0,0,0,0.3);
+/* Coins inférieurs arrondis pour que ce soit plus propre */
+    border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px; 
+/* Position absolue pour afficher la description avec précision */
+    position: absolute;	
+/* Ordonnée de l'élément égale à la hauteur de son parent (150px) la description sera donc située sous son parent*/
+	left: 0px;
+	top: 200px;		
+/* Les transitions */
+    transition-property: top;
+    transition-duration: 1s;
+}
+/* Images à afficher en arrière-plan pour chaque élément*/
+	#item1{background-image: url('../scenographies.jpg')}
+	#item2{background-image: url('../decors.jpg')}
+	#item3{background-image: url('../costumes.jpg')}
+	#item4{background-image: url('../chapeaux.jpg')}
+	#item5{background-image: url('../contact.jpg')}
+
+/* Modification de l'ordonnée des descriptions contenues dans un élément d'une liste survolée par la souris*/
+#menu_bloc li:hover span
+{
+	top: 150px;
+}
+
+	/*MENU VERTICAL*/
+	
+#menu_vertical 
+{
+padding: 10px;
+width: 150px;
+height: auto;
+text-decoration: none;
+font-size: 16px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+text-align: left;
+position: relative;
+}
+#menu_vertical li 
+{
+margin-bottom: 0px;
+list-style-type: none;
+}
+#menu_vertical li a
+ {
+padding: 3px;
+text-decoration: none;
+font-weight: bold;
+color: #ffffff;
+display: block;
+}
+#menu_vertical li a:hover {
+color: #FC7F3C;
+}
+
+	/*SOUS MENUS EN IMAGES*/
+	
+
+#sous_menu_images { /*ensemble des blocs horizontaux*/
+list-style: none;
+margin: 0; /*espace entre les blocs*/
+padding:0px; /* espace entre haut de page et menu*/
+text-align: left;
+position: relative; /*peut se superposer*/
+top:30px;
+left: 100px;
+width: 1200px; /*largeur totale de l'ens des blocs*/
+/* border: solid 1px red; */  /*pour les tests*/
+}
+#sous_menu_images_video { /*ensemble des blocs horizontaux*/
+list-style: none;
+margin: 0; /*espace entre les blocs*/
+padding:0; /* espace entre haut de page et menu*/
+text-align: left;
+position: relative; /*peut se superposer*/
+top:30px;
+left: 170px;
+width: 1000px; /*largeur totale de l'ens des blocs*/
+/* border: solid 1px black; */  /*pour les tests*/
+}
+#sous_menu_images ul{ /*bloc*/
+display:inline-block; /*alignement horizontal des blocs*/
+padding:0; /*espace entre bord gauche du bloc et images*/
+width: 295px; /*largeur de l'ensemble image+texte*/
+/* border: solid 1px red; */   /*pour les tests*/
+}
+#sous_menu_images_video ul{ /*bloc*/
+display:inline-block; /*alignement horizontal des blocs*/
+padding:0; /*espace entre bord gauche du bloc et images*/
+margin:15px;
+width: 440px; /*largeur de l'ensemble image+texte*/
+/* border: solid 1px red; */   /*pour les tests*/
+}
+#sous_menu_images li, #sous_menu_images_video li{ /*image, bloc*/
+display:inline-block; /*alignement horizontal images et texte*/
+padding:0; /*marge extérieure du menu*/
+width:143px; /*largeur du bloc texte ou image*/
+height: 110px;
+margin:0; /*espace entre les blocs*/
+position : relative;
+color: #000000; /*couleur des descriptions*/
+font-family: Helvetica, sans-serif; /*police des descriptions*/
+font-size: 13px; /*taille des descriptions*/
+text-decoration: none;
+list-style: none; /* pour enlever les puces sur IE7 */
+vertical-align: top; 
+text-align: left;
+/* border: solid 1px green; */   /*pour les tests*/
+}
+/*Titre correspondant aux images*/
+#sous_menu_images li a, #sous_menu_images_video li a{
+font-size: 16px;
+font-weight: bold;
+color: #FF5900;
+text-decoration: none;
+margin: 0; /*marge entre les 2 bordures*/
+}
+/* #sous_menu_images li a:hover{
+color: #FC7F3C;
+} */
+
+/*images*/
+.image {
+float:left; /*image à gauche, texte à droite*/
+margin: 0px 6px 6px 0; /*marges : dessus, à droite, dessous, à gauche*/
+width:130px; /*largeur*/
+height:100px; /*hauteur*/
+/* border: solid 1px black;  /*pour les tests*/
+clear:both;
+}
+#images_contact { /*ensemble des images horizontales*/
+list-style: none;
+margin: 0; /*espace entre les blocs*/
+padding:0px; /* espace entre haut de page et menu*/
+text-align: left;
+position: relative; /*peut se superposer*/
+top:-10px;
+left: 90px;
+width: 900px; /*largeur totale de l'ens des blocs*/
+/*border: solid 1px red;     /*pour les tests*/
+}
+.images_contact {
+float:left; /*image à gauche, texte à droite*/
+margin: 5px 5px 5px 5px; /*marges : dessus, à droite, dessous, à gauche*/
+width:60px; /*largeur*/
+height:80px; /*hauteur*/
+/* border: solid 1px black;  pour les tests*/
+clear:both;
+}
+#images_contact ul{ /*bloc*/
+display:inline-block; /*alignement horizontal des blocs*/
+padding:0; /*espace entre bord gauche du bloc et images*/
+width: 70px; /*largeur de l'ensemble image+texte*/
+/*border: solid 1px blue; pour les tests*/
+}
+#images_contact li{ /*image+bloc*/
+display:inline-block; /*alignement horizontal images et texte*/
+padding:0; /*marge extérieure du menu*/
+margin:0; /*espace entre les blocs*/
+position : relative;
+list-style: none; /* pour enlever les puces sur IE7 */
+vertical-align: top; 
+/*border: solid 1px black;  pour les tests*/
+}
+#coord_contact ul { /*ensemble des images horizontales*/
+list-style: none;
+padding:0; /*espace entre bord et texte*/
+position: absolute; /*peut se superposer*/
+top:300px;
+left: 970px;
+width: 370px; /*largeur totale de l'ens des blocs*/
+text-align: center;
+color: #424748; /*couleur des descriptions*/
+font-family: Verdana, Helvetica, sans-serif; /*police des descriptions*/
+font-size: 14px; /*taille des descriptions*/
+text-decoration: none;
+/*border: solid 1px green;  */   /*pour les tests*/
+}
+#coord_contact h1 {
+font-family: Impact, Verdana, Arial, Helvetica, sans-serif;
+font-size: 24px;
+font-weight: lighter;
+color: #000000;
+text-decoration: none;
+}
+.image_mail {
+vertical-align: middle;
+margin: 0px 5px 0px 0px; /*marges : dessus, à droite, dessous, à gauche*/
+width:26px; /*largeur*/
+height:20px; /*hauteur*/
+/* border: solid 1px blue; */ /*pour les tests*/
+}
